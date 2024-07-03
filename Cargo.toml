@@ -1,0 +1,33 @@
+[package]
+name = "minimal_google_protobuf_tokio_rust"
+version = "0.1.0"
+author = "Luca Brugnera <luca.brugnera@gmail.com>"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+prost = "0.10"
+prost-types = "0.10"
+bytes = "1.1"
+futures = "0.3"
+tokio-util = "0.6"
+tonic = "0.7"
+clap = { version = "4", features = ["derive"] }
+
+[build-dependencies]
+prost-build = "0.10"
+tonic-build = "0.7"
+
+#[lib]
+#name = "lib_communication"
+#path = "src/lib.rs"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"

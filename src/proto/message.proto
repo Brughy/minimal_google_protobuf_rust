@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package message;
+
+message Request {
+  string req = 1;
+}
+
+message Response {
+  string rsp = 1;
+}
