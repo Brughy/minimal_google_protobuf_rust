@@ -1,0 +1,1 @@
+# minimal_google_protobuf_tokio_rust
